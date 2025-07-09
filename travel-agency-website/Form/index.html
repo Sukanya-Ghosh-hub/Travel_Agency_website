@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Awaits - Book Your Trip</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1><i class="fas fa-plane-departure"></i> Book Your Dream Vacation</h1>
+            <p>Fill out the form below to start your adventure</p>
+        </div>
+        
+        <form id="travelForm" class="travel-form">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend><i class="fas fa-user"></i> Personal Information</legend>
+                <div class="form-group">
+                    <div class="input-group">
+                        <label for="fullName">Full Name*</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="input-group">
+                        <label for="phone">Phone Number*</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="dob">Date of Birth*</label>
+                        <input type="date" id="dob" name="dob" required>
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- Trip Details -->
+            <fieldset>
+                <legend><i class="fas fa-map-marked-alt"></i> Trip Details</legend>
+                <div class="form-group">
+                    <div class="input-group">
+                        <label for="destination">Destination*</label>
+                        <select id="destination" name="destination" required>
+                            <option value="">Select Destination</option>
+                            <option value="paris">Paris, France</option>
+                            <option value="tokyo">Tokyo, Japan</option>
+                            <option value="bali">Bali, Indonesia</option>
+                            <option value="new-york">New York, USA</option>
+                            <option value="rome">Rome, Italy</option>
+                            <option value="cairo">Cairo, Egypt</option>
+                            <option value="sydney">Sydney, Australia</option>
+                        </select>
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="tripType">Trip Type*</label>
+                        <select id="tripType" name="tripType" required>
+                            <option value="">Select Trip Type</option>
+                            <option value="family">Family Vacation</option>
+                            <option value="honeymoon">Honeymoon</option>
+                            <option value="business">Business Trip</option>
+                            <option value="adventure">Adventure</option>
+                            <option value="solo">Solo Travel</option>
+                        </select>
+                        <i class="fas fa-suitcase"></i>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="input-group">
+                        <label for="departureDate">Departure Date*</label>
+                        <input type="date" id="departureDate" name="departureDate" required>
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="returnDate">Return Date*</label>
+                        <input type="date" id="returnDate" name="returnDate" required>
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="input-group">
+                        <label for="travelers">Number of Travelers*</label>
+                        <input type="number" id="travelers" name="travelers" min="1" max="20" required>
+                        <i class="fas fa-users"></i>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="budget">Budget Range*</label>
+                        <select id="budget" name="budget" required>
+                            <option value="">Select Budget</option>
+                            <option value="economy">Economy ($500-$1,500)</option>
+                            <option value="standard">Standard ($1,500-$3,000)</option>
+                            <option value="premium">Premium ($3,000-$5,000)</option>
+                            <option value="luxury">Luxury ($5,000+)</option>
+                        </select>
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- Accommodation Preferences -->
+            <fieldset>
+                <legend><i class="fas fa-hotel"></i> Accommodation Preferences</legend>
+                <div class="form-group">
+                    <div class="input-group">
+                        <label for="accommodation">Accommodation Type*</label>
+                        <select id="accommodation" name="accommodation" required>
+                            <option value="">Select Accommodation</option>
+                            <option value="hotel">Hotel</option>
+                            <option value="resort">Resort</option>
+                            <option value="apartment">Vacation Rental/Apartment</option>
+                            <option value="hostel">Hostel</option>
+                            <option value="villa">Private Villa</option>
+                        </select>
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="roomType">Room Type*</label>
+                        <select id="roomType" name="roomType" required>
+                            <option value="">Select Room Type</option>
+                            <option value="single">Single Room</option>
+                            <option value="double">Double Room</option>
+                            <option value="suite">Suite</option>
+                            <option value="family">Family Room</option>
+                        </select>
+                        <i class="fas fa-door-open"></i>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="input-group">
+                        <label for="mealPlan">Meal Plan</label>
+                        <select id="mealPlan" name="mealPlan">
+                            <option value="none">No Meals</option>
+                            <option value="breakfast">Breakfast Only</option>
+                            <option value="half-board">Half Board (Breakfast + Dinner)</option>
+                            <option value="full-board">Full Board (All Meals)</option>
+                            <option value="all-inclusive">All Inclusive</option>
+                        </select>
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="specialRequests">Special Requests</label>
+                        <textarea id="specialRequests" name="specialRequests" rows="3" placeholder="Any special requirements or requests..."></textarea>
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- Travel Preferences -->
+            <fieldset>
+                <legend><i class="fas fa-route"></i> Travel Preferences</legend>
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <p>Interests (Select all that apply):</p>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="interests" value="beach"> Beach
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="interests" value="mountains"> Mountains
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="interests" value="city"> City Tours
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="interests" value="history"> Historical Sites
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="interests" value="adventure"> Adventure Activities
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="interests" value="shopping"> Shopping
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="radio-group">
+                        <p>Flight Class Preference:</p>
+                        <label class="radio-label">
+                            <input type="radio" name="flightClass" value="economy" checked> Economy
+                            <span class="radiomark"></span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="flightClass" value="premium"> Premium Economy
+                            <span class="radiomark"></span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="flightClass" value="business"> Business
+                            <span class="radiomark"></span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="flightClass" value="first"> First Class
+                            <span class="radiomark"></span>
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- Form Actions -->
+            <div class="form-actions">
+                <button type="reset" class="btn reset-btn"><i class="fas fa-redo"></i> Reset Form</button>
+                <button type="submit" class="btn submit-btn"><i class="fas fa-paper-plane"></i> Submit Booking</button>
+            </div>
+        </form>
+        
+        <div id="thankYouMessage" class="thank-you-message">
+            <div class="message-content">
+                <i class="fa-solid fa-xmark"></i>
+                <i class="fas fa-check-circle"></i>
+                <h2>Thank You for Your Booking!</h2>
+                <p>We've received your travel request. Our agent will contact you within 24 hours to confirm your booking details.</p>
+                <button id="newBookingBtn" class="btn new-booking-btn"><i class="fas fa-plus"></i><span> Create New Booking</span></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
